@@ -5,6 +5,8 @@ class Clock extends Component {
   constructor(props) {
     super(props)
     this.state = { date: new Date() }
+
+    // this.openDialog = this.openDialog.bind(this);
   }
 
   componentDidMount(){
@@ -23,8 +25,18 @@ class Clock extends Component {
       })
   }
 
+  openDialog(num, e){
+      console.log("e: ", e)
+    alert(num)
+  }
+
   render() {
-    return <h1>现在时间是：{this.state.date.toLocaleTimeString()}</h1>
+    return (
+        <div>
+            <h1>现在时间是：{this.state.date.toLocaleTimeString()}</h1>
+            <button onClick={this.openDialog.bind(this, 3)}>弹窗</button>
+        </div>
+    )
   }
 }
 
