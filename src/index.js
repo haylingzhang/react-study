@@ -12,7 +12,7 @@ const button = (
     <button onClick={handleClick}>click</button>
 )
 
-ReactDOM.render(<div><Clock /></div>, document.getElementById("root"))
+ReactDOM.render(<div><Clock name='张海'/></div>, document.getElementById("root"))
 
 ReactDOM.render(<div>{button}</div>, document.getElementById("sub-root"))
 

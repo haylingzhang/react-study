@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import ReactDOM from "react-dom"
 
 class Clock extends Component {
   constructor(props) {
@@ -34,7 +33,9 @@ class Clock extends Component {
     return (
         <div>
             <h1>现在时间是：{this.state.date.toLocaleTimeString()}</h1>
-            <button onClick={this.openDialog.bind(this, 3)}>弹窗</button>
+            {
+                this.props.name === "张海林" && <button onClick={this.openDialog.bind(this, 3)}>{this.props.name}</button>
+            }
         </div>
     )
   }
